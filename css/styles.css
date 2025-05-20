@@ -3,7 +3,7 @@ html{
 }
 
 main{
-    background-image: url(/img/fondo.jpg);
+    background-color: blue;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -11,24 +11,103 @@ main{
 
 h1{
     color: red;
-    
+    margin: 0;
     font-size: 200%;
     font-family: "Bebas Neue", sans-serif;
 }
-
+h4{
+    margin:0;
+}
 p{
     color: rgb(100, 0, 230);
 }
 
 header{
-    display: flex;
-    justify-content: space-between;
+    
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Para que quede por encima del resto */
+  background-color: white; /* Para que no sea transparente y tape el contenido */
+  
+
+}
+.headerContainer{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr  1fr;
+    grid-template-rows: 1fr 1fr; /* Ajusta según tus elementos: logo, nav, menú */
     align-items: center;
     background-color: #ccc;
     position: sticky;
     top: 0px;
-    transition: transform 0.2s ease-in-out;
-    box-shadow: 0px 3px 5px rgb(0, 0, 0);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.titulo{
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Bebas Neue", sans-serif;
+    color: red;
+    margin: 0;
+}
+
+.menu{
+    background-color: #ccc;
+    margin: 0 ;
+    padding: 0;
+    grid-column: 1 / 4; /* Que ocupe las 3 columnas, si quieres el menú abajo de todo */
+    grid-row: 2 / 3; 
+    
+    
+    
+    
+}
+.nav{
+    height: auto;
+    margin-right: 0;
+    
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li{
+    
+    margin: 0 10px;
+    
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-family: "Bebas Neue", sans-serif;
+    
+}
+
+.logo{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2; 
+    justify-self: start;
+    align-self: center;
+    height: 75px;
+    margin-left: 16px;
+    
+}
+.logo img{
+    height: 100%;
+    width: auto;
+    display: block;
+    
+    
 }
 
 .animacion{
@@ -40,22 +119,7 @@ header{
 }
 
 
-.nav{
-    height: auto;
-    margin-right: 3%;
-    
-}
 
-nav ul{
-    list-style: none;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-nav ul li{
-    margin: 3px;
-}
 
 
 .pcolor{
