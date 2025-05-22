@@ -7,6 +7,8 @@ main{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    margin: 0;
+    padding: 0;
 }
 
 h1{
@@ -14,6 +16,10 @@ h1{
     margin: 0;
     font-size: 200%;
     font-family: "Bebas Neue", sans-serif;
+}
+h2{
+    margin:0;
+    padding:0;
 }
 h4{
     margin:0;
@@ -23,12 +29,12 @@ p{
 }
 
 header{
-    
-  position: sticky;
-  top: 0;
-  z-index: 1000; /* Para que quede por encima del resto */
-  background-color: white; /* Para que no sea transparente y tape el contenido */
-  
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Para que quede por encima del resto */
+    background-color: white; /* Para que no sea transparente y tape el contenido */
+    margin: 0;
+    padding: 0;
 
 }
 .headerContainer{
@@ -122,11 +128,6 @@ nav ul li a{
 
 
 
-.pcolor{
-    color: blue;
-}
-
-
 footer{
     background-color: burlywood;
 }
@@ -153,20 +154,17 @@ footer{
 }
 
 .Catalogo{
-    
-    height: auto;
     display: flex;
-    flex: wrap ;
+    flex-wrap: wrap;
     justify-content: space-around;
-    width: 500px;
-
-
-
+    width: 100%;
+    max-width: 100%;     /* Opcional, asegura que no se pase del viewport */
+    box-sizing: border-box;
+    gap: 16px;
 }
 .producto{
     border: 3px solid black;
     height: 100px;
-    width: 100px;
 }
 
 
@@ -185,3 +183,10 @@ footer{
     
 }
 
+/*Hasta 768px */
+@media (max-width: 768px){
+    .titulo{
+        font-size: 1rem;
+    }
+
+}
